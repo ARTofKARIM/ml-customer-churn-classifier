@@ -1,0 +1,12 @@
+data:
+  path: "data/customer_churn.csv"
+  target_column: "Churn"
+  test_ratio: 0.2
+models:
+  - "DecisionTree"
+  - "RandomForest"
+  - "NaiveBayes"
+  - "LogisticRegression"
+evaluation:
+  cv_folds: 10
+  metrics: ["accuracy", "precision", "recall", "f1", "auc"]
